@@ -54,5 +54,5 @@ $HOME/SALOME-9.14.0/salome -t $HOME/test_dumpfile.py
 Which should generate a .stl file for a dummy geometry. To check if we have a new file ``inlet_patch.stl``, run:
 
 ```
-ls $HOME
+ls
 ```
