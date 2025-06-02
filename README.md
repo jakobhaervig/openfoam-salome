@@ -48,7 +48,7 @@ wget https://raw.githubusercontent.com/jakobhaervig/openfoam-salome/main/test_du
 Now generate a stl file from the ``test_dumpfile.py`` we just downloaded:
 
 ```
-$HOME/SALOME-9.14.0/salome -t test_dumpfile.py
+$HOME/SALOME-9.14.0/salome -t $HOME/test_dumpfile.py
 ```
 
 Which should generate a .stl file. To check if we have a new file file ``inlet_patch.stl``, run:
