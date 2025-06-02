@@ -3,7 +3,7 @@
 In this guide we will install and setup Salome for our OpenFOAM workflow.
 
 ## Step 1: Download Salome
-**1a)** First, install [Salome](https://www.salome-platform.org/?page_id=2430). Choose the latest version and **Linux Universal**.
+**1a)** First, install [Salome](https://www.salome-platform.org/?page_id=2430). Choose the latest version and **Linux Universal** and download (this may take some time).
 
 ## Step 2: Move Salome to the WSL file system
 To access the Salome installation through WSL, we need to move the downloaded files to WSL.
@@ -14,7 +14,7 @@ To access the Salome installation through WSL, we need to move the downloaded fi
 mv /mnt/c/Users/jakob/Downloads/SALOME-9.14.0.tar.gz $HOME
 ```
 
-**2b)** Now unpack the file:
+**2b)** Now unpack the file (this may take some time):
 ```
 tar -xf $HOME/SALOME-9.14.0.tar.gz -C $HOME
 ```
@@ -30,7 +30,7 @@ cd && ls
 ## Step 3: Verify installation
 
 **3a)**
-First, let's test we can open the Salome GUI from within WSL. In the WSL terminal type (assuming we have Salome 9.14.0):
+First, let's verify that we can open the Salome GUI from within WSL. In the WSL terminal type (assuming we have Salome 9.14.0):
 
 ```
 $HOME/SALOME-9.14.0/salome
