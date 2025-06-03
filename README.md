@@ -27,33 +27,17 @@ cd && ls
 
 ![](unpacked-salome.jpg)
 
-## Step 3: Set alias for Salome
-Open a Ubuntu (WSL) terminal (Ubuntu App) and enter the following:
+## Step 3: Verify installation
 
-**3a)** Copy/paste the following into the terminal to add a function to your ``.bash_aliases`` file:
-
-```
-wget https://raw.githubusercontent.com/jakobhaervig/openfoam-salome/main/.bash_aliases -O - >> $HOME/.bash_aliases
-```
-**3b)** Next, source your ``.bashrc`` file (or reopen the terminal):
-```
-source $HOME/.bashrc
-```
-
-The new function ``salome_setup`` added to our ``.bash_aliases`` will automatically for a SALOME folder and create an alias to the ``salome`` file within that.
-
-## Step 4: Verify installation
-
-**4a)**
-Close the old terminal and open a new one. First, let's verify that we can open the Salome GUI from within WSL. In the WSL terminal type:
+**3a)**
+First, let's verify that we can open the Salome GUI from within WSL. In the WSL terminal type:
 
 ```
-salome_setup
+$HOME/SALOME-9.14.0/salome
 ```
+Which should open the GUI. Close it.
 
-which should set the correct alias.
-
-**4b)**
+**3b)**
 Now, let's test Python scripting capabilities. Download a sample file:
 
 ```
@@ -63,10 +47,10 @@ wget https://raw.githubusercontent.com/jakobhaervig/openfoam-salome/main/test_du
 Now generate a stl file from the ``test_dumpfile.py`` we just downloaded:
 
 ```
-salome -t $HOME/test_dumpfile.py
+$HOME/SALOME-9.14.0/salome -t $HOME/test_dumpfile.py
 ```
 
-Which should generate a .stl file for a dummy geometry. To check if we have a new file ``inlet_patch.stl``, run:
+Which should generate a .stl file for a dummy geometry in your current folder. To check if we have a new file ``inlet_patch.stl``, run:
 
 ```
 ls
