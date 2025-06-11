@@ -55,3 +55,58 @@ Which should generate a .stl file for a dummy geometry in your current folder. T
 ```
 ls
 ```
+
+## Step 4: Next, we will install Python and some useful packages
+First, we will install Miniconda, which is a lightweight apporach to manage our Python installation.
+
+**4a)**
+Copy/paste the following into a WSL terminal:
+
+```bash
+mkdir -p ~/miniconda3
+wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/miniconda3/miniconda.sh
+bash ~/miniconda3/miniconda.sh -b -u -p ~/miniconda3
+rm -rf ~/miniconda3/miniconda.sh
+```
+
+**4b)**
+Then, initialise your conda environment:
+```bash
+~/miniconda3/bin/conda init bash
+```
+
+**4c)**
+Now, re-open a WSL terminal and create a virtual environment called ``of`` with pip and Python installed:
+```bash
+conda create -n of pip python
+```
+
+**4d)**
+Activate the virtual environment:
+```bash
+conda activate of
+```
+
+**4e)**
+Activate the virtual environment:
+```bash
+conda activate of
+```
+
+**4f)**
+Install a couple of Python packages needed for our optimisation loop:
+```bash
+pip install Platypus-Opt numpy
+```
+
+**4g)**
+Everytime we want to use the environment we may not activate/deactivate it with:
+```bash
+conda activate of
+```
+
+and
+
+```bash
+conda deactivate of
+```
