@@ -96,7 +96,7 @@ conda activate of
 **4f)**
 Install a couple of Python packages needed for our optimisation loop:
 ```bash
-pip install Platypus-Opt numpy
+pip install Platypus-Opt numpy matplotlib
 ```
 
 **4g)**
