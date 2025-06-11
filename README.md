@@ -88,18 +88,12 @@ conda activate of
 ```
 
 **4e)**
-Activate the virtual environment:
-```bash
-conda activate of
-```
-
-**4f)**
 Install a couple of Python packages needed for our optimisation loop:
 ```bash
 pip install Platypus-Opt numpy matplotlib
 ```
 
-**4g)**
+**4f)**
 Everytime we want to use the environment we may not activate/deactivate it with:
 ```bash
 conda activate of
