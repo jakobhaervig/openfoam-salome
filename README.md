@@ -1,9 +1,11 @@
 # Installing and setting up Salome for Parametric CAD
 
-In this guide we will install and setup Salome for our OpenFOAM workflow.
+In this guide we will install and setup Salome and Python for our OpenFOAM workflow.
 
 ## Step 1: Download Salome
-**1a)** First, install [Salome](https://www.salome-platform.org/?page_id=2430). Choose the latest version and **Linux Universal** and download (this may take some time).
+We will use Salome for CAD geometry generation.
+
+**1a)** First, download [Salome](https://www.salome-platform.org/?page_id=2430). **Very important:** Choose the **Linux Universal** and the latest version (this may take some time to download).
 
 ## Step 2: Move Salome to the WSL file system
 To access the Salome installation through WSL, we need to move the downloaded files to WSL.
@@ -38,13 +40,13 @@ $HOME/SALOME-9.14.0/salome
 Which should open the GUI. Close it.
 
 **3b)**
-Now, let's test Python scripting capabilities. Download a sample file:
+Now, let's test Python scripting capabilities. Salome already comes with its own Python installation which we will test now. This is useful for automating CAD generation in our workflow. Download a sample Python file ``test_dumpfile.py``:
 
 ```
 wget https://raw.githubusercontent.com/jakobhaervig/openfoam-salome/main/test_dumpfile.py -O - >> $HOME/test_dumpfile.py
 ```
 
-Now generate a stl file from the ``test_dumpfile.py`` we just downloaded:
+Now use Salome to generate a stl file from the ``test_dumpfile.py`` that we just downloaded:
 
 ```
 $HOME/SALOME-9.14.0/salome -t $HOME/test_dumpfile.py
@@ -57,10 +59,10 @@ ls
 ```
 
 ## Step 4: Next, we will install Python and some useful packages
-First, we will install Miniconda, which is a lightweight apporach to manage our Python installation.
+First, we will install Miniconda, which is a lightweight approach to manage our Python installation.
 
 **4a)**
-Copy/paste the following into a WSL terminal:
+Copy/paste the following into a WSL terminal to download and install Miniconda:
 
 ```bash
 mkdir -p ~/miniconda3
